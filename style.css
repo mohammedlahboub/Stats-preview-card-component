@@ -1,0 +1,180 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+
+}
+:root{
+    /* Main backgrond */
+    --v-d-blue:hsl(233, 47%, 7%);
+    /* card background */
+    --d-saturated-blue:hsl(244, 38%, 16%);
+    /* accent */
+    --soft-violet:hsl(277, 64%, 61%);
+    /* main heading | stats */
+    --white:hsl(0, 0%, 100%);
+    /* main paragraph */
+    --s-t-white:hsla(0, 0%, 100%, 0.75);
+    /* stat heading */
+    --s-t-white-2:hsla(0, 0%, 100%, 0.6);
+    /* font-size */
+    --f-s:15px;
+}
+/* ################ body ################ */
+body{
+    height: 100vh;
+    background-color: var(--v-d-blue);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* ################ wrapper ################ */
+.wrapper{
+    /* background-color: var(--soft-violet); */
+    max-width: 54em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 1em 0.4em 0.4em 1em  ;
+    margin: 1em;
+
+}
+/* ################ txt ################ */
+.txt{
+    background-color: var(--d-saturated-blue);
+    padding: 3em;
+    border-radius: 0.4em 0 0 0.4em ;
+
+}
+
+/* ################ heading ################ */
+.heading{
+    font-size: 2em;
+    font-family: 'Inter', sans-serif;
+    color: var(--white);
+    font-weight: 700;
+}
+/* ################ heading-colored ################ */
+.heading-colored{
+    color: var(--soft-violet);
+}
+/* ################ desc  ################ */
+.desc{
+    font-family: 'Inter', sans-serif;
+    color: var(--s-t-white);
+    font-size: 0.82em;
+    line-height: 1.5em;
+    font-weight: 400;
+    margin: 2em 0;
+}
+/* ################ stats  ################ */
+.stats{
+    color: var(--white);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 2.5em auto 0;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 1.2em;
+
+}
+.stats h2{
+    margin-bottom: 0.5em;
+}
+.stats p {
+    color: var(--s-t-white-2);
+    font-weight: 400;
+    font-size: 0.6em;
+    font-family: 'Lexend Deca', sans-serif ;
+    text-transform:uppercase ;
+
+}
+
+
+/* ################ img ################ */
+.img{
+   
+    background-image: url(./images/image-header-desktop.jpg);
+    opacity: 55%;
+    /* background-color: hsl(277, 54%, 64%); */
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 0.4em 0.4em 0;
+    
+}
+.overlay{
+    background-color: hsl(277, 100%, 62%);
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    border-radius: 0 0.4em 0.4em 0;
+
+}
+
+/* ################ footer ################ */
+
+
+
+    .attribution {
+        margin-top: 2em;
+        color: var(--soft-violet);
+        font-size: 12px; text-align: center; }
+    .attribution a { color: hsl(0, 0%, 100%); }
+
+
+/* ################ Mobile ################ */
+    @media (max-width:500px) {
+        body{
+            height: auto;
+        }
+        .wrapper{
+            margin: 4em 1em;
+            max-width: 380px;
+            grid-template-columns: 1fr ;
+            grid-template-rows: 1fr 1fr 1fr;
+            border-radius: 0.4em 0.4em 1em 1em   ;
+        }
+        .img{
+            background-image: url(./images/image-header-mobile.jpg);
+            grid-row: 1;
+            border-radius: 00.4em 0.4em 0 0 ;
+        }
+        .txt{
+            padding: 2em;
+            text-align: center;
+            grid-row: span 2;
+            border-radius:0 0 00.4em 0.4em  ;
+        
+        }
+        .stats{
+            font-size: 1.5em;
+            margin-top: 2em;
+            grid-template-columns: 1fr;
+            gap: 1em    ;
+        }
+        .desc{
+            font-size: 1.1em;
+            margin-bottom: 0;
+        }
+        .overlay{
+            border-radius: 00.4em 0.4em 0 0 ;
+
+        }
+    }
